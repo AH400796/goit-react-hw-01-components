@@ -7,13 +7,13 @@ import user from '../../data/user.json';
 import data from '../..//data/data.json';
 import friends from '../../data/friends.json';
 import transactions from '../../data/transactions';
-import css from './App.module.css';
+import { Container, Wrapper } from './App.styled';
 
 export const App = () => {
   return (
-    <div className={css.app}>
+    <Container>
       <div>
-        <div className={css.wrapper}>
+        <Wrapper>
           <Profile
             avatar={user.avatar}
             username={user.username}
@@ -22,13 +22,13 @@ export const App = () => {
             stats={user.stats}
           />
           <FriendList friends={friends} />
-        </div>
+        </Wrapper>
 
         <Statistics title="Upload stats" stats={data} />
         {/* <Statistics stats={data} /> */}
       </div>
 
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 };

@@ -1,29 +1,31 @@
-.statistics {
+import styled from 'styled-components';
+
+export const StatisticSection = styled.section`
   width: 500px;
   text-align: center;
   font-size: 16px;
   background-color: rgb(233, 233, 233);
   border: 1px solid rgb(175, 175, 175);
   border-radius: 5px;
-}
+`;
 
-.title {
+export const StatisticTitle = styled.h2`
   padding: 10px;
   font-size: 28px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgb(66, 66, 66);
-}
+`;
 
-.statList {
+export const StatisticList = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
   list-style: none;
   justify-content: center;
-}
+`;
 
-.item {
+export const StatisticItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,11 +34,13 @@
   height: 100px;
   gap: 20px;
   color: rgb(252, 252, 252);
-}
+  background-color: ${props => props.backgroundColor};
+`;
 
-.label {
+export const StatisticLabel = styled.span`
   font-size: 16px;
-}
-.percentage {
+`;
+
+export const StatisticPercentage = styled.span`
   font-size: 26px;
-}
+`;

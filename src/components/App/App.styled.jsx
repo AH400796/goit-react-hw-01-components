@@ -1,4 +1,6 @@
-.app {
+import styled from 'styled-components';
+
+export const Container = styled.div`
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   display: flex;
@@ -8,11 +10,11 @@
   gap: 50px;
   font-size: 40;
   color: #010101;
-}
+`;
 
-.wrapper {
+export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 40px;
-}
+`;

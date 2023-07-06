@@ -1,7 +1,9 @@
-.friendList {
+import styled from 'styled-components';
+
+export const List = styled.ul`
   margin: 0;
   padding: 10px;
   background-color: rgb(212, 226, 243);
   border: 1px solid rgb(206, 197, 197);
   border-radius: 10px;
-}
+`;

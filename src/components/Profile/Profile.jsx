@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
-import css from '../Profile/Profile.module.css';
+import {
+  ProfileCard,
+  ProfileInfo,
+  ProfileImage,
+  ProfileName,
+  ProfileTag,
+  ProfileLocation,
+  StatsList,
+  StatsItem,
+  StatsLabel,
+  StatsQuantity,
+} from './Profile.styled';
 
 export default function Profile({
   username,
@@ -9,29 +20,29 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className={css.profileCard}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <ProfileCard>
+      <ProfileInfo>
+        <ProfileImage src={avatar} alt={username} />
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>{tag}</ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileInfo>
 
-      <ul className={css.stats}>
-        <li className={css.statsItem}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
-        </li>
-        <li className={css.statsItem}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
-        </li>
-        <li className={css.statsItem}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <StatsList>
+        <StatsItem>
+          <StatsLabel>Followers</StatsLabel>
+          <StatsQuantity>{followers}</StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Views</StatsLabel>
+          <StatsQuantity>{views}</StatsQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel>Likes</StatsLabel>
+          <StatsQuantity>{likes}</StatsQuantity>
+        </StatsItem>
+      </StatsList>
+    </ProfileCard>
   );
 }
 

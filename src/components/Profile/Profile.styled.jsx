@@ -1,50 +1,52 @@
-.profileCard {
+import styled from 'styled-components';
+
+export const ProfileCard = styled.div`
   padding-top: 30px;
   border: 1px solid rgb(206, 197, 197);
   border-radius: 2px;
-}
-.description {
+`;
+export const ProfileInfo = styled.div`
   text-align: center;
-}
+`;
 
-.avatar {
+export const ProfileImage = styled.img`
   border-radius: 50%;
   width: 250px;
   margin-bottom: 20px;
   border: 1px solid rgb(206, 197, 197);
-}
+`;
 
-.name {
+export const ProfileName = styled.p`
   margin: 0;
   font-size: 38px;
   font-weight: 500;
   margin-bottom: 20px;
-}
+`;
 
-.tag {
+export const ProfileTag = styled.p`
   margin: 0;
   margin-bottom: 10px;
   font-size: 26px;
   font-weight: 500;
   color: rgb(101, 103, 104);
-}
+`;
 
-.location {
+export const ProfileLocation = styled.p`
   margin: 0;
   margin-bottom: 20px;
   font-size: 26px;
   font-weight: 500;
   color: rgb(101, 103, 104);
-}
+`;
 
-.stats {
+export const StatsList = styled.ul`
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-}
+`;
 
-.statsItem {
+export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,15 +56,15 @@
   height: 164px;
   background-color: rgb(212, 226, 243);
   border: 1px solid rgb(206, 197, 197);
-}
+`;
 
-.label {
+export const StatsLabel = styled.span`
   font-size: 16px;
   font-weight: 500;
   color: rgb(101, 103, 104);
-}
+`;
 
-.quantity {
+export const StatsQuantity = styled.span`
   font-size: 26px;
   font-weight: 500;
-}
+`;
